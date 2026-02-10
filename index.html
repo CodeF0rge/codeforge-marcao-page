@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquitetura & Construção</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">&#9634;</span>
+      <span class="brand-text">ARQSTUDIO</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#obras">Obras</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Arquitetura &amp; Construção</p>
+      <h1>Transformamos<br><em>projetos</em> em realidade</h1>
+      <p class="hero-desc">Construções residenciais e comerciais com qualidade, prazo e compromisso.</p>
+      <a href="#obras" class="btn-primary">Ver Obras</a>
+    </div>
+  </header>
+
+  <!-- OBRAS -->
+  <section id="obras" class="obras">
+    <div class="section-header">
+      <p class="section-tag">Portfólio</p>
+      <h2>Nossas Obras</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="obras-grid">
+
+      <!-- Card 1 -->
+      <div class="obra-card">
+        <div class="obra-blur-bg">
+          <img src="obra_1.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="obra-image-wrapper">
+          <img src="obra_1.jpg" alt="Edifício residencial em construção">
+        </div>
+        <div class="obra-info">
+          <span class="obra-badge">Em andamento</span>
+          <h3>Edifício Residencial</h3>
+          <p>Estrutura em concreto armado com acabamento premium. Projeto moderno com varandas amplas e vista panorâmica.</p>
+          <div class="obra-details">
+            <span>&#9679; 8 pavimentos</span>
+            <span>&#9679; 450m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="obra-card">
+        <div class="obra-blur-bg">
+          <img src="obra_2.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="obra-image-wrapper">
+          <img src="obra_2.jpg" alt="Casa moderna em construção">
+        </div>
+        <div class="obra-info">
+          <span class="obra-badge">Em andamento</span>
+          <h3>Casa Moderna</h3>
+          <p>Residência contemporânea com design arrojado, pé-direito duplo e ampla área de convivência integrada.</p>
+          <div class="obra-details">
+            <span>&#9679; 2 pavimentos</span>
+            <span>&#9679; 280m²</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    <div class="sobre-content">
+      <p class="section-tag">Quem somos</p>
+      <h2>Experiência que<br>constrói confiança</h2>
+      <p>Com anos de atuação no mercado, entregamos obras com excelência técnica e atenção aos detalhes. Do projeto à entrega das chaves, cuidamos de cada etapa.</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Obras entregues</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Anos de experiência</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="100">0</span><span class="stat-percent">%</span>
+          <span class="stat-label">Clientes satisfeitos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <div class="section-header">
+      <p class="section-tag">Fale conosco</p>
+      <h2>Solicite um Orçamento</h2>
+      <div class="section-line"></div>
+    </div>
+    <form class="contato-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!')">
+      <div class="form-row">
+        <input type="text" placeholder="Seu nome" required>
+        <input type="tel" placeholder="Telefone" required>
+      </div>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Descreva seu projeto..." rows="4" required></textarea>
+      <button type="submit" class="btn-primary">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-icon">&#9634;</span>
+        <span class="brand-text">ARQSTUDIO</span>
+      </div>
+      <p>&copy; 2026 ArqStudio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
