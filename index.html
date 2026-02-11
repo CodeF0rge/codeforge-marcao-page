@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arquitetura & Construção</title>
+  <title>Marcão Construções - Ilha Comprida, Cananéia e Iguape</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-brand">
-      <span class="brand-icon">&#9634;</span>
-      <span class="brand-text">ARQSTUDIO</span>
+      <span class="brand-icon">&#9660;</span>
+      <span class="brand-text">MARCÃO</span>
     </div>
     <ul class="nav-links">
       <li><a href="#inicio">Início</a></li>
@@ -29,82 +29,104 @@
   <header id="inicio" class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-tag">Arquitetura &amp; Construção</p>
-      <h1>Transformamos<br><em>projetos</em> em realidade</h1>
-      <p class="hero-desc">Construções residenciais e comerciais com qualidade, prazo e compromisso.</p>
-      <a href="#obras" class="btn-primary">Ver Obras</a>
+      <p class="hero-tag">Construção &amp; Reforma</p>
+      <h1>Quer construir ou<br>reformar seu <em>imóvel</em>?</h1>
+      <p class="hero-desc">Sou o Marcão. Construtor do alicerce ao acabamento, incluindo pintura e elétrica. Atendendo Ilha Comprida, Cananéia e Iguape.</p>
+      <a href="#contato" class="btn-primary">Solicite um Orçamento</a>
     </div>
   </header>
 
   <!-- OBRAS -->
   <section id="obras" class="obras">
     <div class="section-header">
-      <p class="section-tag">Portfólio</p>
-      <h2>Nossas Obras</h2>
+      <p class="section-tag">Trabalhos</p>
+      <h2>Minhas Obras</h2>
       <div class="section-line"></div>
     </div>
 
     <div class="obras-grid">
 
       <!-- Card 1 -->
-      <div class="obra-card">
+      <div class="obra-card" data-obra="1">
         <div class="obra-blur-bg">
-          <img src="obra_1.jpg" alt="" aria-hidden="true">
+          <img src="img/obra1/3.jpg" alt="" aria-hidden="true">
         </div>
         <div class="obra-image-wrapper">
-          <img src="obra_1.jpg" alt="Edifício residencial em construção">
+          <img src="img/obra1/3.jpg" alt="Construção residencial - alvenaria">
         </div>
         <div class="obra-info">
-          <span class="obra-badge">Em andamento</span>
-          <h3>Edifício Residencial</h3>
-          <p>Estrutura em concreto armado com acabamento premium. Projeto moderno com varandas amplas e vista panorâmica.</p>
-          <div class="obra-details">
-            <span>&#9679; 8 pavimentos</span>
-            <span>&#9679; 450m²</span>
-          </div>
+          <span class="obra-badge">Residencial</span>
+          <h3>Casa em Alvenaria</h3>
+          <p>Construção completa de residência em alvenaria estrutural, do alicerce à cobertura.</p>
+          <span class="obra-cta">Clique para ver as etapas &#8594;</span>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="obra-card">
+      <div class="obra-card" data-obra="2">
         <div class="obra-blur-bg">
-          <img src="obra_2.jpg" alt="" aria-hidden="true">
+          <img src="img/obra2/1.jpg" alt="" aria-hidden="true">
         </div>
         <div class="obra-image-wrapper">
-          <img src="obra_2.jpg" alt="Casa moderna em construção">
+          <img src="img/obra2/1.jpg" alt="Estrutura de telhado em madeira">
         </div>
         <div class="obra-info">
-          <span class="obra-badge">Em andamento</span>
-          <h3>Casa Moderna</h3>
-          <p>Residência contemporânea com design arrojado, pé-direito duplo e ampla área de convivência integrada.</p>
-          <div class="obra-details">
-            <span>&#9679; 2 pavimentos</span>
-            <span>&#9679; 280m²</span>
-          </div>
+          <span class="obra-badge">Telhado</span>
+          <h3>Estrutura de Madeira</h3>
+          <p>Montagem completa de estrutura de telhado com madeiramento de qualidade.</p>
+          <span class="obra-cta">Clique para ver as etapas &#8594;</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="obra-card" data-obra="3">
+        <div class="obra-blur-bg">
+          <img src="img/obra3/1.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="obra-image-wrapper">
+          <img src="img/obra3/1.jpg" alt="Sobrado em construção">
+        </div>
+        <div class="obra-info">
+          <span class="obra-badge">Sobrado</span>
+          <h3>Sobrado Completo</h3>
+          <p>Construção de sobrado do zero — fundação, estrutura, alvenaria e acabamento.</p>
+          <span class="obra-cta">Clique para ver as etapas &#8594;</span>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- PÁGINA DE ETAPAS (FULL-PAGE) -->
+  <div class="page-overlay" id="pageOverlay">
+    <header class="page-header">
+      <button class="page-back" aria-label="Voltar">&#8592; Voltar</button>
+      <h2 class="page-title"></h2>
+      <span class="page-subtitle">Acompanhe as etapas desta construção</span>
+    </header>
+    <div class="page-gallery">
+      <!-- Imagens inseridas via JS -->
+    </div>
+  </div>
+
   <!-- SOBRE -->
   <section id="sobre" class="sobre">
     <div class="sobre-content">
-      <p class="section-tag">Quem somos</p>
+      <p class="section-tag">Quem sou</p>
       <h2>Experiência que<br>constrói confiança</h2>
-      <p>Com anos de atuação no mercado, entregamos obras com excelência técnica e atenção aos detalhes. Do projeto à entrega das chaves, cuidamos de cada etapa.</p>
+      <p>Sou o Marcão, construtor com anos de experiência na região. Trabalho do alicerce ao acabamento — alvenaria, elétrica, pintura e muito mais. Cada obra é tratada com dedicação e compromisso.</p>
       <div class="stats">
         <div class="stat">
           <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Obras entregues</span>
         </div>
         <div class="stat">
-          <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Anos de experiência</span>
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-label">Cidades atendidas</span>
         </div>
         <div class="stat">
           <span class="stat-number" data-target="100">0</span><span class="stat-percent">%</span>
-          <span class="stat-label">Clientes satisfeitos</span>
+          <span class="stat-label">Compromisso</span>
         </div>
       </div>
     </div>
@@ -113,17 +135,28 @@
   <!-- CONTATO -->
   <section id="contato" class="contato">
     <div class="section-header">
-      <p class="section-tag">Fale conosco</p>
-      <h2>Solicite um Orçamento</h2>
+      <p class="section-tag">Fale comigo</p>
+      <h2>Faça seu Orçamento</h2>
       <div class="section-line"></div>
     </div>
-    <form class="contato-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!')">
+    <div class="contato-info">
+      <p class="contato-desc">Orçamento sem compromisso! Entre em contato pelo WhatsApp ou preencha o formulário abaixo.</p>
+      <a href="https://wa.me/5516992057091?text=Ol%C3%A1%20Marc%C3%A3o%2C%20gostaria%20de%20um%20or%C3%A7amento!" class="btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        (16) 99205-7091
+      </a>
+      <div class="contato-cidades">
+        <span>&#9679; Ilha Comprida</span>
+        <span>&#9679; Cananéia</span>
+        <span>&#9679; Iguape</span>
+      </div>
+    </div>
+    <form class="contato-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! O Marcão entrará em contato.')">
       <div class="form-row">
         <input type="text" placeholder="Seu nome" required>
         <input type="tel" placeholder="Telefone" required>
       </div>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Descreva seu projeto..." rows="4" required></textarea>
+      <textarea placeholder="Descreva seu projeto ou reforma..." rows="4" required></textarea>
       <button type="submit" class="btn-primary">Enviar Mensagem</button>
     </form>
   </section>
@@ -132,10 +165,10 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <span class="brand-icon">&#9634;</span>
-        <span class="brand-text">ARQSTUDIO</span>
+        <span class="brand-icon">&#9660;</span>
+        <span class="brand-text">MARCÃO</span>
       </div>
-      <p>&copy; 2026 ArqStudio. Todos os direitos reservados.</p>
+      <p>&copy; 2026 Marcão Construções. Todos os direitos reservados.</p>
     </div>
   </footer>
 

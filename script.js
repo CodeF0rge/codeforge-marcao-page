@@ -128,3 +128,62 @@ window.addEventListener('scroll', () => {
     nav.style.background = 'rgba(10, 10, 10, 0.7)';
   }
 });
+
+// ===== PÁGINA FULL-PAGE DE ETAPAS =====
+const obrasData = {
+  1: { title: 'Casa em Alvenaria', total: 7 },
+  2: { title: 'Estrutura de Madeira', total: 4 },
+  3: { title: 'Sobrado Completo', total: 5 }
+};
+
+const pageOverlay = document.getElementById('pageOverlay');
+const pageTitle = pageOverlay.querySelector('.page-title');
+const pageGallery = pageOverlay.querySelector('.page-gallery');
+const pageBack = pageOverlay.querySelector('.page-back');
+
+function openPage(obraId) {
+  const obra = obrasData[obraId];
+  if (!obra) return;
+
+  pageTitle.textContent = obra.title;
+  pageGallery.innerHTML = '';
+
+  for (let i = 1; i <= obra.total; i++) {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.style.animationDelay = `${(i - 1) * 0.08}s`;
+
+    const img = document.createElement('img');
+    img.src = `img/obra${obraId}/${i}.jpg`;
+    img.alt = `${obra.title} - Etapa ${i}`;
+
+    const label = document.createElement('span');
+    label.className = 'etapa-label';
+    label.textContent = `Etapa ${i}`;
+
+    item.appendChild(img);
+    item.appendChild(label);
+    pageGallery.appendChild(item);
+  }
+
+  pageOverlay.classList.add('active');
+  pageOverlay.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+}
+
+function closePage() {
+  pageOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Card clicks
+document.querySelectorAll('.obra-card').forEach(card => {
+  card.addEventListener('click', () => openPage(card.dataset.obra));
+});
+
+// Close
+pageBack.addEventListener('click', closePage);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && pageOverlay.classList.contains('active')) closePage();
+});
