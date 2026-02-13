@@ -131,9 +131,9 @@ window.addEventListener('scroll', () => {
 
 // ===== PÁGINA FULL-PAGE DE ETAPAS =====
 const obrasData = {
-  1: { title: 'Casa em Alvenaria', total: 7 },
-  2: { title: 'Estrutura de Madeira', total: 4 },
-  3: { title: 'Sobrado Completo', total: 5 }
+  1: { title: 'Casa em Alvenaria', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg'] },
+  2: { title: 'Área de Lazer', images: ['3.jpg', '1.jpg', '4.jpg', '2.jpg'] },
+  3: { title: 'Sobrado Completo', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'] }
 };
 
 const pageOverlay = document.getElementById('pageOverlay');
@@ -148,23 +148,27 @@ function openPage(obraId) {
   pageTitle.textContent = obra.title;
   pageGallery.innerHTML = '';
 
-  for (let i = 1; i <= obra.total; i++) {
+  const images = Array.isArray(obra.images)
+    ? obra.images
+    : Array.from({ length: obra.total || 0 }, (_, idx) => `${idx + 1}.jpg`);
+
+  images.forEach((fileName, index) => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
-    item.style.animationDelay = `${(i - 1) * 0.08}s`;
+    item.style.animationDelay = `${index * 0.08}s`;
 
     const img = document.createElement('img');
-    img.src = `img/obra${obraId}/${i}.jpg`;
-    img.alt = `${obra.title} - Etapa ${i}`;
+    img.src = `img/obra${obraId}/${fileName}`;
+    img.alt = `${obra.title} - Etapa ${index + 1}`;
 
     const label = document.createElement('span');
     label.className = 'etapa-label';
-    label.textContent = `Etapa ${i}`;
+    label.textContent = `Etapa ${index + 1}`;
 
     item.appendChild(img);
     item.appendChild(label);
     pageGallery.appendChild(item);
-  }
+  });
 
   pageOverlay.classList.add('active');
   pageOverlay.scrollTop = 0;
@@ -187,3 +191,4 @@ pageBack.addEventListener('click', closePage);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && pageOverlay.classList.contains('active')) closePage();
 });
+
