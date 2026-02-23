@@ -1,4 +1,4 @@
-// ===== MOBILE NAV TOGGLE =====
+﻿// ===== MOBILE NAV TOGGLE =====
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -132,8 +132,20 @@ window.addEventListener('scroll', () => {
 // ===== PÁGINA FULL-PAGE DE ETAPAS =====
 const obrasData = {
   1: { title: 'Casa em Alvenaria', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg'] },
-  2: { title: 'Área de Lazer', images: ['3.jpg', '1.jpg', '4.jpg', '2.jpg'] },
-  3: { title: 'Sobrado Completo', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'] }
+  2: { title: 'Área de Lazer', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'] },
+  3: { title: 'Sobrado Completo', images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'] },
+  4: {
+    title: 'Projeto em Execução',
+    images: ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', '9.jpeg', '10.jpeg', '11.jpeg', '12.jpeg', '13.jpeg', '14.jpeg', '15.jpeg', '16.jpeg']
+  },
+  5: {
+    title: 'Desenvolvimento de Interiores',
+    images: ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', '9.jpeg', '10.jpeg', '11.jpeg', '12.jpeg', '13.jpeg', '14.jpeg', '15.jpeg', '16.jpeg', '17.jpeg', '18.jpeg', '19.jpeg', '20.jpeg']
+  },
+  6: {
+    title: 'Execução de Obra',
+    images: ['1.jpeg', '2.jpeg', '3.jpeg', '4.jpeg', '5.jpeg', '6.jpeg', '7.jpeg', '8.jpeg', '9.jpeg', '10.jpeg']
+  }
 };
 
 const pageOverlay = document.getElementById('pageOverlay');
@@ -191,4 +203,5 @@ pageBack.addEventListener('click', closePage);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && pageOverlay.classList.contains('active')) closePage();
 });
+
 
