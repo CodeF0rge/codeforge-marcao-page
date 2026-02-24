@@ -204,4 +204,36 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && pageOverlay.classList.contains('active')) closePage();
 });
 
+// ===== CONTATO FORM -> WHATSAPP =====
+const contatoForm = document.getElementById('contatoForm');
+
+if (contatoForm) {
+  contatoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('contatoNome')?.value.trim() || '';
+    const telefone = document.getElementById('contatoTelefone')?.value.trim() || '';
+    const mensagemProjeto = document.getElementById('contatoMensagem')?.value.trim() || '';
+
+    const mensagem = [
+      'Olá Marcão! Gostaria de um orçamento.',
+      '',
+      `Nome: ${nome}`,
+      `Telefone: ${telefone}`,
+      `Projeto: ${mensagemProjeto}`
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/5516992057091?text=${encodeURIComponent(mensagem)}`;
+    const novaAba = window.open(whatsappUrl, '_blank', 'noopener');
+
+    // Fallback in case browser blocks pop-up
+    if (!novaAba) {
+      window.location.href = whatsappUrl;
+    }
+
+    contatoForm.reset();
+    alert('Mensagem pronta! Finalize o envio no WhatsApp.');
+  });
+}
+
 
